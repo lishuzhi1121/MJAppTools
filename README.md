@@ -4,7 +4,7 @@
 > 2020/05/23 FIXED:
 > * 修复app的Mach-O文件与其bundle路径(xxx.app)文件名不一致时找不到的情况；
 > * 通过make编译时新增armv7 & arm64 架构支持；
-> * 改fork仓库新增 .gitignore 文件(for macOS,Objective-C);
+> * 该fork仓库新增 .gitignore 文件(for macOS,Objective-C);
 
 ## 目前已有的功能
 
