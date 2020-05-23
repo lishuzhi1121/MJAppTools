@@ -2,7 +2,7 @@
 处理iOS APP信息的命令行工具
 
 > 2020/05/23 FIXED:
-> * 修复app的Mach-O文件与其bundle路径(xxx.app)文件名不一致时找不到的情况；
+> * 修复app的Mach-O文件与其bundle路径(xxx.app)文件名不一致时找不到的情况(比如腾讯视频等)；
 > * 通过make编译时新增armv7 & arm64 架构支持；
 > * 该fork仓库新增 .gitignore 文件(for macOS,Objective-C);
 
