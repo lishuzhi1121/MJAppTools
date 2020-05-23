@@ -35,6 +35,12 @@
 		2DBBEB25201C8FA200780B3C /* MJMachO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJMachO.h; sourceTree = "<group>"; };
 		2DBBEB26201C8FA200780B3C /* MJMachO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJMachO.m; sourceTree = "<group>"; };
 		2DFA8508201ECF5700F3F555 /* FBBundleInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBBundleInfo.h; sourceTree = "<group>"; };
+		B1CDAED624793FB900ACD8DB /* _LSQueryResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _LSQueryResult.h; sourceTree = "<group>"; };
+		B1CDAED724793FB900ACD8DB /* _LSValidationToken.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _LSValidationToken.h; sourceTree = "<group>"; };
+		B1CDAED824793FB900ACD8DB /* LSBundleProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSBundleProxy.h; sourceTree = "<group>"; };
+		B1CDAED924793FB900ACD8DB /* LSResourceProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSResourceProxy.h; sourceTree = "<group>"; };
+		B1CDAEDA24793FB900ACD8DB /* _LSBundleIDValidationToken.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _LSBundleIDValidationToken.h; sourceTree = "<group>"; };
+		B1CDAEDB24793FB900ACD8DB /* _LSLazyPropertyList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _LSLazyPropertyList.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,12 @@
 		2DBBEAF7201C6F3800780B3C /* SystemHeaders */ = {
 			isa = PBXGroup;
 			children = (
+				B1CDAEDA24793FB900ACD8DB /* _LSBundleIDValidationToken.h */,
+				B1CDAEDB24793FB900ACD8DB /* _LSLazyPropertyList.h */,
+				B1CDAED624793FB900ACD8DB /* _LSQueryResult.h */,
+				B1CDAED724793FB900ACD8DB /* _LSValidationToken.h */,
+				B1CDAED824793FB900ACD8DB /* LSBundleProxy.h */,
+				B1CDAED924793FB900ACD8DB /* LSResourceProxy.h */,
 				2DBBEAF8201C6F3800780B3C /* LSApplicationProxy.h */,
 				2DBBEAF9201C6F3800780B3C /* LSApplicationWorkspace.h */,
 				2DBBEAFA201C6F3800780B3C /* FBApplicationInfo.h */,
@@ -326,11 +338,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2M8C7XMTC2;
 				INFOPLIST_FILE = MJAppTools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mj.mjapptools;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mob.mjapptools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -340,11 +352,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2M8C7XMTC2;
 				INFOPLIST_FILE = MJAppTools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mj.mjapptools;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mob.mjapptools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

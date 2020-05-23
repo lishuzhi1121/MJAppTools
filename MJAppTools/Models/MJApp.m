@@ -8,6 +8,7 @@
 
 #import "MJApp.h"
 #import "FBApplicationInfo.h"
+#import "LSBundleProxy.h"
 #import "LSApplicationProxy.h"
 #import "NSFileHandle+Extension.h"
 #import "MJMachO.h"
@@ -35,6 +36,7 @@
     if (self = [super init]) {
         LSApplicationProxy *appProxy = (LSApplicationProxy*)info;
         self.displayName = appProxy.localizedName ? appProxy.localizedName : appProxy.itemName;
+        self.executableName = ((LSBundleProxy *)info).bundleExecutable;
         self.bundleIdentifier = info.bundleIdentifier;
         self.bundlePath = info.bundleURL.path;
         self.dataPath = info.dataContainerURL.path;
@@ -46,8 +48,9 @@
 
 - (void)setupExecutable
 {
-    NSRange range = NSMakeRange([self.bundlePath rangeOfString:@"/" options:NSBackwardsSearch].location + 1, self.bundlePath.lastPathComponent.length - 4);
-    self.executableName = [self.bundlePath substringWithRange:range];
+    // FIXED: 修复app的Mach-O文件与其bundle路径(xxx.app)文件名不同的情况, self.executableName已赋值
+//    NSRange range = NSMakeRange([self.bundlePath rangeOfString:@"/" options:NSBackwardsSearch].location + 1, self.bundlePath.lastPathComponent.length - 4);
+//    self.executableName = [self.bundlePath substringWithRange:range];
     
     NSString *filepath = [self.bundlePath stringByAppendingPathComponent:self.executableName];
     if (![[NSFileManager defaultManager] fileExistsAtPath:filepath]) return;

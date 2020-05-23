@@ -1,5 +1,7 @@
 # Config
-ARCH = armv7
+ARCHv7   = armv7
+ARCHv7s  = armv7s
+ARCH64   = arm64
 IOS_VERSION = 8.0
 EXECUTABLE_NAME = MJAppTools
 
@@ -29,7 +31,7 @@ codesign: compile
 
 compile:
 	@xcrun -sdk iphoneos \
-		clang -arch $(ARCH) \
+		clang -arch $(ARCHv7) -arch $(ARCHv7s) -arch $(ARCH64) \
 		-mios-version-min=$(IOS_VERSION) \
 		-fobjc-arc \
 		-framework Foundation \
